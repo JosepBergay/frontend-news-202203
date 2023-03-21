@@ -117,17 +117,43 @@ image: /breaking-news.webp
 
 ---
 transition: slide-left
+layout: image-right
+image: http://uniknow.github.io/AgileDev/site/0.1.9-SNAPSHOT/images/testing-pyramid.png
 ---
 
 <h1> New QA <fluent-mdl2:test-auto-solid class="inline mx-2 my-auto" /> </h1>
 
+<v-clicks>
 
+- Emphasis on Testing (core)
+
+- Continuous Integration
+
+- Acceptance Tests
+
+- Automate most crucial User Journeys
+
+</v-clicks>
 
 ---
 transition: slide-left
+layout: image-left
+image: https://sportshub.cbsistatic.com/i/r/2023/01/12/3c069acc-8ea9-4117-87b6-03429c7157a3/thumbnail/1200x675/6a7a0f70cb152d8f4c80fe24724d9c37/enigma69.jpg
 ---
 
 <h1> New Team Member <carbon:user-follow class="inline mx-2 my-auto" /> </h1>
+
+<v-clicks>
+
+- Frontender
+
+- Vue enthusiast
+
+- Iris focused
+
+- Incorporation mid April
+
+</v-clicks>
 
 ---
 transition: slide-left
