@@ -1,53 +1,260 @@
 ---
-# try also 'default' to start simple
 theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
 background: https://source.unsplash.com/collection/94734566/1920x1080
-# apply any windi css classes to the current slide
-class: 'text-center'
-# https://sli.dev/custom/highlighters.html
+class: text-center
 highlighter: shiki
-# show line numbers in code blocks
-lineNumbers: false
-# some information about the slides, markdown enabled
+lineNumbers: true
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
 
   Learn more at [Sli.dev](https://sli.dev)
-# persist drawings in exports and build
 drawings:
   persist: false
-# page transition
 transition: slide-left
-# use UnoCSS
 css: unocss
+title: Novedades del Front
+favicon: 'https://www.testjg.es/wp-content/uploads/2020/07/cropped-test_fav-32x32.png'
 ---
 
-# Welcome to Slidev
+# Novedades del Front
 
-Presentation slides for developers
+No news, good news?
 
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
+---
+transition: slide-left
+---
+
+# Loads of news!
+
+But first, some data:
+
+<div class="flex justify-between">
+<div class="flex flex-col">
+<ul>
+<v-clicks>
+MantTest Web
+<li>
+<div v-if="$slidev.nav.clicks >= 1" class="flex items-center gap-5">
+  Start date: <RelativeDate :date="'Thu Feb 10 09:40:58 2022 +0100'" />   
+</div>
+</li>
+<li>
+<div v-if="$slidev.nav.clicks >= 2" class="flex items-center gap-5">
+  Contributors: <AnimatedNumber :n="3" />
+</div>
+</li>
+<li>
+<div v-if="$slidev.nav.clicks >= 3" class="flex items-center gap-5">
+  Number of commits: <AnimatedNumber :n="4333" />
+</div>
+</li>
+<li>
+<div v-if="$slidev.nav.clicks >= 4" class="flex items-center gap-5">
+  Azure DevOps
+</div>
+</li>
+<li>
+<div v-if="$slidev.nav.clicks >= 5" class="items-center gap-5">
+  Work Items closed:
+  <ul>
+    <li>
+      New: <AnimatedNumber :n="96" />
+    </li>
+    <li>
+      In Planning: <AnimatedNumber :n="9" />
+    </li>
+    <li>
+      Planned: <AnimatedNumber :n="2" />
+    </li>
+    <li>
+      In Progress: <AnimatedNumber :n="16" />
+    </li>
+    <li>
+      To Publish: <AnimatedNumber :n="1" />
+    </li>
+    <li>
+      To Validate: <AnimatedNumber :n="114" />
+    </li>
+    <li>
+      Closed: <AnimatedNumber :n="164" />
+    </li>
+  </ul>
+</div>
+</li>
+</v-clicks>
+</ul>
+</div>
+<div class="text-center">
+<img v-if="$slidev.nav.clicks === 4" src="/kanban_devops.png" style="height: 21rem" class="rounded-xl shadow" />
+<img v-else-if="$slidev.nav.clicks > 4" src="/cfd_devops.png" style="height: 21rem" class="rounded-xl shadow" />
+<div v-if="$slidev.nav.clicks >= 4" class="mt-4">
+Transparency, Inspection and Adaptation
+</div>
 </div>
 
-<div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
-    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
 </div>
 
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
+---
+transition: slide-left
+layout: image-right
+image: /breaking-news.webp
+---
+
+# News
+
+<div class="flex flex-col justify-around h-[80%]">
+
+<v-clicks>
+
+<h2> New QA <fluent-mdl2:test-auto-solid class="inline mx-2 my-auto" /> </h2>
+
+<h2> New Team Member <carbon:user-follow class="inline mx-2 my-auto" /> </h2>
+
+<h2> New Project <fluent-mdl2:new-team-project class="inline mx-2 my-auto" /> </h2>
+
+</v-clicks>
+
+</div>
+
+---
+transition: slide-left
+---
+
+<h1> New QA <fluent-mdl2:test-auto-solid class="inline mx-2 my-auto" /> </h1>
+
+
+
+---
+transition: slide-left
+---
+
+<h1> New Team Member <carbon:user-follow class="inline mx-2 my-auto" /> </h1>
+
+---
+transition: slide-left
+---
+
+<h1> New Project <fluent-mdl2:new-team-project class="inline mx-2 my-auto" /> </h1>
+
+<div class="flex justify-around h-full">
+<div class="flex flex-col">
+
+<v-click>
+
+### What?
+
+</v-click>
+
+<div class="flex items-center gap-4 mt-2 mb-8">
+<img v-click src="/mt-icon.svg" style="height: 5rem; width: 5rem">
+<img v-click="2" src="/iris-icon.svg" style="height: 5rem; width: 5rem">
+<fluent-mdl2:unknown-solid v-click="14" style="height: 5rem; width: 5rem;" />
+</div>
+
+<v-click>
+
+### How?
+
+</v-click>
+
+<v-clicks>
+
+* Monorepo setup
+* NX
+* Azure DevOps Teams
+
+</v-clicks>
+
+
+</div>
+
+<div class="flex flex-col">
+<v-click>
+
+### Why?
+
+</v-click>
+
+<v-clicks>
+
+* Code reuse
+* Fast development
+* Common practices
+* Avoid context switching
+* Design System?
+
+</v-clicks>
+
+</div>
+
+</div>
+
+---
+transition: slide-left
+---
+
+<div class="absolute top-0 right-0 bot-0 w-full h-full">
+<iframe src="/graph.html" class="h-full w-full" frameborder="0"></iframe>
+</div>
+
+---
+transition: slide-up
+---
+
+<h1> New Project <fluent-mdl2:new-team-project class="inline mx-2 my-auto" /> </h1>
+
+<div v-click-hide v-if="$slidev.nav.clicks < 1" class="flex h-[80%] w-full justify-around items-center">
+<Tweet id="7269997868" />
+</div>
+
+<div class="flex h-[80%] w-full justify-around items-center">
+<img v-click="1" class="h-64" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Sekhmet.svg/1200px-Sekhmet.svg.png" />
+<img v-click="3" class="h-64" src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/incan-gods-the-great-creator-viracocha-on-white-leather-serge-averbukh.jpg" />
+<img v-click="2" class="h-64" src="https://images-na.ssl-images-amazon.com/images/I/91Oj%2BsDhfpL._SL1500_.jpg" />
+<img v-click="4" class="absolute h-72 animate-bounce" src="https://imgix.bustle.com/rehost/2016/9/13/83c0093d-4f3e-4a6b-ae66-994db94f8900.jpg?w=1200&h=630&fit=crop&crop=faces&fm=jpg" />
+</div>
+
+
+---
+transition: fade-in
+layout: fact
+---
+
+# Tatu
+
+---
+transition: fade-out
+layout: iframe-right
+url: https://sketchfab.com/models/ee81451e0a814207be57e522effd70fd/embed?autospin=1&autostart=1&ui_hint=0&ui_theme=dark&dnt=1
+preload: true
+---
+
+<h1> Project Tatu <game-icons:armadillo class="inline mx-2 my-auto text-orange-400 animate-flash" /> </h1>
+
+<ul class="gap-5 flex flex-col">
+
+<v-clicks>
+<li>
+Robust
+</li>
+<li>
+Bugs for breakfast <fluent-mdl2:bug class="text-red" />
+</li>
+<li>
+Habitat Engineer
+</li>
+
+</v-clicks>
+
+</ul>
+
+---
+layout: center
+class: text-center
+---
+
+## Thanks 🎉
 
 ---
 transition: fade-out
