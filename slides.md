@@ -13,13 +13,11 @@ drawings:
   persist: false
 transition: slide-left
 css: unocss
-title: Novedades del Front
+title: Frontend News
 favicon: 'https://www.testjg.es/wp-content/uploads/2020/07/cropped-test_fav-32x32.png'
 ---
 
-# Novedades del Front
-
-No news, good news?
+# Frontend News
 
 ---
 transition: slide-left
