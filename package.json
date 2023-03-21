@@ -12,5 +12,9 @@
     "@slidev/theme-seriph": "*",
     "dayjs": "^1.11.7",
     "gsap": "^3.11.5"
+  },
+  "devDependencies": {
+    "@iconify-json/fluent-mdl2": "^1.1.1",
+    "@iconify-json/game-icons": "^1.1.2"
   }
 }
