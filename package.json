@@ -1,5 +1,5 @@
 {
-  "name": "frontend-news-202203",
+  "name": "frontend-news-202303",
   "private": true,
   "scripts": {
     "build": "slidev build",
